@@ -13,8 +13,7 @@ const Login:React.FC<Props> = (props) =>  {
         return password.length < 6 ? 'password can\'t be less than 6 symbols' : ''
     }
      return <LoginForm  onSubmit={onSubmit} onCancel={() => props.onCancel ? props.onCancel() : null}
-                        passwordErrorMessage={errorMessage}>
-    </LoginForm>
+                        passwordErrorMessage={errorMessage}></LoginForm>
 
 }
 export default Login;
