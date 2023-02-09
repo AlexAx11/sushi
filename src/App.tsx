@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {HashRouter, Switch, Route, Navigate} from "react-router-dom";
+import {HashRouter, Routes, Route, Navigate} from "react-router-dom";
 import './App.css'
 import Navigator from "./components/library/Navigator";
 import {
@@ -143,17 +143,17 @@ const App: React.FC = () => {
                     </Typography>
                     </Toolbar>
                 </AppBar>}
-            <Switch>
-                <Route path={PATH_HOME} exact render={() => <HomePage/>}/>
-                <Route path={PATH_LOGOUT} exact render={() => <Logout/>}/>
-                <Route path={PATH_LOGIN} exact render={() => <Login/>}/>
-                <Route path={PATH_BASKET} exact render={() => <Basket/>}/>
-                <Route path={PATH_DISHES} exact render={() => <Dishes/>}/>
-                <Route path={PATH_ORDERS} exact render={() => <Orders/>}/>
-                <Route path={PATH_CLIENTS} exact render={() => <Customers/>}/>
-                <Route path={PATH_INFO_FORM} exact render={() => <InfoPage/>}/>
-                <Route path={PATH_PROFILE} exact render={() => <ProfilePage/>}/>
-            </Switch>
+            <Routes>
+                <Route path={PATH_HOME} element={<HomePage/>}/>
+                <Route path={PATH_LOGOUT} element={<Logout/>}/>
+                <Route path={PATH_LOGIN} element={<Login/>}/>
+                <Route path={PATH_BASKET} element={<Basket/>}/>
+                <Route path={PATH_DISHES} element={<Dishes/>}/>
+                <Route path={PATH_ORDERS} element={<Orders/>}/>
+                <Route path={PATH_CLIENTS} element={<Customers/>}/>
+                <Route path={PATH_INFO_FORM} element={<InfoPage/>}/>
+                <Route path={PATH_PROFILE} element={<ProfilePage/>}/>
+            </Routes>
 
         </HashRouter>
     </ThemeProvider>
