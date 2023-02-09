@@ -19,6 +19,7 @@
     "@types/react-dom": "^18.0.10",
     "@types/react-redux": "^7.1.25",
     "@types/react-router-dom": "^5.3.3",
+    "axios-observable": "^2.0.0",
     "firebase": "^9.17.1",
     "lodash": "^4.17.21",
     "query": "^0.2.0",
