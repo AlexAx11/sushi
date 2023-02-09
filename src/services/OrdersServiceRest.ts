@@ -17,7 +17,7 @@ export default class OrdersServiceRest implements OrdersService {
             console.log('getAllOrders. without params');
         }
         return Axios.get<Order[]>(this.url).pipe(map(response => {
-            response.data.forEach(o => o.date = new Date(o.date as string))
+            response.data.forEach((o: { date: string | Date; }) => o.date = new Date(o.date as string))
             return response.data
         }));
     }
