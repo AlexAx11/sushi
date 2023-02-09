@@ -11,7 +11,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import {getDish} from "../library/BasketForm";
 import Dish from "../../models/Dish";
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import { createTheme } from '@material-ui/core/styles';
 import {UserData} from "../../services/AuthService";
 import {useSelector} from "react-redux";
 import {ReducersType} from "../../redux/store";
@@ -29,7 +29,7 @@ function handleButtonClick(str: string) {
     }
 }
 
-const THEME = createMuiTheme({
+const THEME = createTheme({
     typography: {
         "fontFamily": 'Cursive ,sans-serif',
         "fontSize": 15,
