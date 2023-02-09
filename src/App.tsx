@@ -130,7 +130,7 @@ const App: React.FC = () => {
                         <IconButton edge="start" color="inherit" aria-label="menu">
                             <MenuIcon >
                                 <Navigator items={getItems()} customer={customer}/>
-                            <Redirect to={customer.role === 'manager' || customer.role === 'customer' ||
+                            <Navigate to={customer.role === 'manager' || customer.role === 'customer' ||
                             customer.role === ''
                             ? PATH_HOME : PATH_ORDERS}/>
                             </MenuIcon>
