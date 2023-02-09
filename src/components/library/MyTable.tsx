@@ -131,7 +131,7 @@ function getCells(obj: Object): JSX.Element[] {
                                     inputProps: { 'aria-label': 'rows per page' },
                                     native: true,
                                 }}
-                                onChangePage={handleChangePage}
+                                onPageChange={handleChangePage}
                                 onChangeRowsPerPage={handleChangeRowsPerPage}
                                 color="textPrimary"
                             />
