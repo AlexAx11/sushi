@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {HashRouter, Switch, Route, Redirect} from "react-router-dom";
+import {HashRouter, Switch, Route, Navigate} from "react-router-dom";
 import './App.css'
 import Navigator from "./components/library/Navigator";
 import {
@@ -119,7 +119,7 @@ const App: React.FC = () => {
                     </Typography>
                     <div style={{display: 'block', marginLeft: '30%'}}>
                         <Navigator items={getItems()} customer={customer}/>
-                        <Redirect to={customer.role === 'manager' || customer.role === 'customer' ||
+                        <Navigate to={customer.role === 'manager' || customer.role === 'customer' ||
                         customer.role === ''
                             ? PATH_HOME : PATH_ORDERS}/>
                     </div>
